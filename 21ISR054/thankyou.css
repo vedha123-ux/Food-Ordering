@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #ff6347;
+  }
+  
+  /* Main Section */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+  }
+  
+  .payment-section,
+  .thank-you-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .payment-section h2,
+  .thank-you-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .payment-section p,
+  .thank-you-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  /* Form Styling */
+  form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff6347;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .payment-btn,
+  .otp-btn,
+  .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .payment-btn:hover,
+  .otp-btn:hover,
+  .btn:hover {
+    background: #e55342;
+  }
+  
+  .payment-btn:disabled,
+  .otp-btn:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* Thank You Page Specific */
+  .thank-you-section {
+    padding: 3rem;
+  }
+  
+  .thank-you-section .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .thank-you-section .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  

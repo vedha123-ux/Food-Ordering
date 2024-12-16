@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Vegetarian Delights</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Vegetarian Delights - Menu</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>Our Vegetarian Menu</h2>
+        <div class="menu-items">
+          <!-- Menu Items -->
+          <div class="menu-item" id="item1">
+            <img src="images/s.jpg" alt="Vegetable Samosa">
+            <h3>Vegetable Samosa</h3>
+            <p class="price">$5.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Samosa')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Samosa')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item2">
+            <img src="images/istockphoto-177314242-612x612.jpg" alt="Vegetable Pakora">
+            <h3>Vegetable Pakora</h3>
+            <p class="price">$4.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Pakora')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Pakora')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item3">
+            <img src="images/download.jpeg" alt="Vegetable Biryani">
+            <h3>Vegetable Biryani</h3>
+            <p class="price">$12.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Biryani')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Biryani')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item4">
+            <img src="images/pulao-recipe.jpg" alt="Vegetable Pulao">
+            <h3>Vegetable Pulao</h3>
+            <p class="price">$30.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Pulao')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Pulao')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item5">
+            <img src="images/istockphoto-175455156-612x612.jpg" alt="Vegetable Stir Fry">
+            <h3>Vegetable Stir Fry</h3>
+            <p class="price">$14.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Stir Fry')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Stir Fry')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item6">
+            <img src="images/istockphoto-601941442-612x612.jpg" alt="Vegetarian Burger">
+            <h3>Vegetarian Burger</h3>
+            <p class="price">$8.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetarian Burger')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetarian Burger')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item7">
+            <img src="images/rice.jpeg" alt="Vegetarian Fried Rice">
+            <h3>Vegetarian Fried Rice</h3>
+            <p class="price">$11.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetarian Fried Rice')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetarian Fried Rice')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item8">
+            <img src="images/istockphoto-604054152-2048x2048.jpg" alt="Vegetable Dumplings">
+            <h3>Vegetable Dumplings</h3>
+            <p class="price">$7.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Dumplings')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Dumplings')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item9">
+            <img src="images/momo.jpg" alt="Vegetable Momo">
+            <h3>Vegetable Momo</h3>
+            <p class="price">$6.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Momo')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Momo')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item10">
+            <img src="images/istockphoto-1186759790-2048x2048.jpg" alt="Vegetable Tikka">
+            <h3>Panner Tikka</h3>
+            <p class="price">$13.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Tikka')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Tikka')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item11">
+            <img src="images/dish2.webp" alt="Vegetarian Pasta">
+            <h3>Vegetarian Pasta</h3>
+            <p class="price">$16.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetarian Pasta')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetarian Pasta')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item12">
+            <img src="images/pizza.jpg" alt="Vegetarian Pizza">
+            <h3>Vegetarian Pizza</h3>
+            <p class="price">$15.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetarian Pizza')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetarian Pizza')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item13">
+            <img src="images/contact.jpg" alt="Avocado Toast">
+            <h3>Cakes</h3>
+            <p class="price">$9.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Cakes')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Avocado Toast')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item14">
+            <img src="images/images (1).jpg" alt="Vegetable Spring Rolls">
+            <h3>Vegetable Spring Rolls</h3>
+            <p class="price">$5.00</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Spring Rolls')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Spring Rolls')">Buy Now</button>
+          </div>
+
+          <div class="menu-item" id="item15">
+            <img src="images/istockphoto-465979096-2048x2048.jpg" alt="Vegetable Curry">
+            <h3>Vegetable Curry</h3>
+            <p class="price">$13.50</p>
+            <button class="btn view-menu">View Menu</button>
+            <button class="btn add-to-wishlist" onclick="addToWishlist('Vegetable Curry')">Add to Wishlist</button>
+            <button class="btn buy-now" onclick="buyNow('Vegetable Curry')">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Vegetarian Delights. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let wishlist = [];
+
+    function addToWishlist(item) {
+      if (!wishlist.includes(item)) {
+        wishlist.push(item);
+        alert(item + " has been added to your wishlist!");
+      } else {
+        alert(item + " is already in your wishlist.");
+      }
+    }
+
+    function buyNow(item) {
+      alert("You are buying: " + item);
+    }
+  </script>
+</body>
+</html>

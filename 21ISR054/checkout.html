@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Gourmet Paradise</title>
+  <link rel="stylesheet" href="checkout.css">
+  <script>
+    function displayCart() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartContainer = document.getElementById("cart-items");
+      const totalPrice = document.getElementById("total-price");
+      let total = 0;
+
+      cartContainer.innerHTML = ""; // Clear the container
+
+      if (cart.length > 0) {
+        cart.forEach((item, index) => {
+          const cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+          cartItem.innerHTML = `
+            <div class="cart-item-details">
+              <p>${item.item}</p>
+              <p>$${item.price.toFixed(2)}</p>
+            </div>
+            <div class="quantity-controls">
+              <input type="number" value="${item.quantity}" min="1" data-index="${index}" onchange="updateQuantity(${index}, this.value)">
+              <button class="delete-btn" onclick="removeItem(${index})">Delete</button>
+            </div>
+          `;
+          cartContainer.appendChild(cartItem);
+          total += item.price * item.quantity;
+        });
+        totalPrice.innerText = `Total: $${total.toFixed(2)}`;
+      } else {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        totalPrice.innerText = "";
+      }
+    }
+
+    function removeItem(index) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1); // Remove the item at the given index
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart(); // Refresh the cart display
+    }
+
+    function updateQuantity(index, quantity) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (quantity <= 0) return; // Prevent invalid quantities
+      cart[index].quantity = parseInt(quantity, 10); // Update the quantity
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart(); // Refresh the cart display
+    }
+
+    window.onload = displayCart;
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Gourmet Paradise</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Checkout Section -->
+  <main>
+    <section class="checkout-section">
+      <div class="container">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items-container"></div>
+        <div id="total-price" class="total-price">Total: $0</div>
+        <button class="checkout-btn" onclick="window.location.href='payment.html'">Proceed to Payment</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Gourmet Paradise. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

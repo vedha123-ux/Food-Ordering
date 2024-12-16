@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order - Gourmet Paradise</title>
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    // Function to add items to the cart
+    function addToCart(item, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ item, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(item + " has been added to the cart!");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Gourmet Paradise</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Order Section -->
+  <main>
+    <section class="order-section">
+      <div class="container">
+        <h2>Order Your Favorite Dishes</h2>
+        <p>Browse our menu and place your order. We offer a variety of delicious vegetarian dishes just for you!</p>
+        
+        <!-- Order Form -->
+        <div class="menu-grid">
+          <!-- Example of 3 items, you can add more items as necessary -->
+          <div class="menu-item">
+            <img src="images/s.jpg" alt="Samosa">
+            <h3>Samosa</h3>
+            <p>Crispy pastry filled with spiced potatoes and peas.</p>
+            <span class="price">$3.99</span>
+            <button class="add-to-cart" onclick="addToCart('Samosa', 3.99)">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+       <!-- Juices -->
+       <div class="menu-item">
+        <img src="images/Mango juice.jpeg" alt="Mango Juice">
+        <h3>Mango Juice</h3>
+        <p>Refreshing and sweet mango juice, made with fresh mangoes.</p>
+        <span class="price">$4.00</span>
+        <button class="add-to-cart" onclick="addToCart('Mango Juice', 4.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/orange juice.jpeg" alt="Orange Juice">
+        <h3>Orange Juice</h3>
+        <p>Freshly squeezed orange juice, packed with Vitamin C.</p>
+        <span class="price">$3.50</span>
+        <button class="add-to-cart" onclick="addToCart('Orange Juice', 3.50)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/apple juice.jpeg" alt="Apple Juice">
+        <h3>Apple Juice</h3>
+        <p>Crisp and refreshing apple juice made from fresh apples.</p>
+        <span class="price">$3.80</span>
+        <button class="add-to-cart" onclick="addToCart('Apple Juice', 3.80)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+
+      <!-- Milkshakes -->
+      <div class="menu-item">
+        <img src="images/strawberry-milkshake.avif" alt="Strawberry Milkshake">
+        <h3>Strawberry Milkshake</h3>
+        <p>A creamy milkshake made with fresh strawberries and vanilla ice cream.</p>
+        <span class="price">$5.50</span>
+        <button class="add-to-cart" onclick="addToCart('Strawberry Milkshake', 5.50)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/chocolate Milkshake.jpg" alt="Chocolate Milkshake">
+        <h3>Chocolate Milkshake</h3>
+        <p>Indulge in a rich and creamy chocolate milkshake.</p>
+        <span class="price">$5.00</span>
+        <button class="add-to-cart" onclick="addToCart('Chocolate Milkshake', 5.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/vanilla.avif" alt="Vanilla Milkshake">
+        <h3>Vanilla Milkshake</h3>
+        <p>A classic, creamy milkshake made with vanilla ice cream.</p>
+        <span class="price">$4.50</span>
+        <button class="add-to-cart" onclick="addToCart('Vanilla Milkshake', 4.50)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+
+      <!-- South Indian Dishes -->
+      <div class="menu-item">
+        <img src="images/idly.jpg" alt="Idli">
+        <h3>Idli</h3>
+        <p>Soft steamed rice cakes served with coconut chutney and sambar.</p>
+        <span class="price">$7.00</span>
+        <button class="add-to-cart" onclick="addToCart('Idli', 7.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/dosa.jpg" alt="Dosa">
+        <h3>Dosa</h3>
+        <p>Thin, crispy pancake served with chutney and sambar.</p>
+        <span class="price">$6.50</span>
+        <button class="add-to-cart" onclick="addToCart('Dosa', 6.50)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/uttapam.jpeg" alt="Uttapam">
+        <h3>Uttapam</h3>
+        <p>Thick pancake topped with vegetables and served with chutney.</p>
+        <span class="price">$6.00</span>
+        <button class="add-to-cart" onclick="addToCart('Uttapam', 6.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/vada.jpg" alt="Vada">
+        <h3>Vada</h3>
+        <p>Fried doughnut-shaped lentil fritters served with chutney.</p>
+        <span class="price">$4.00</span>
+        <button class="add-to-cart" onclick="addToCart('Vada', 4.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/pongal.jpeg" alt="Pongal">
+        <h3>Pongal</h3>
+        <p>Savory rice dish flavored with black pepper, ginger, and curry leaves.</p>
+        <span class="price">$5.00</span>
+        <button class="add-to-cart" onclick="addToCart('Pongal', 5.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-item">
+        <img src="images/gulab jamun.jpg" alt="Gulab Jamun">
+        <h3>Gulab Jamun</h3>
+        <p>Soft, syrup-soaked dumplings made from milk solids and cardamom.</p>
+        <span class="price">$4.50</span>
+        <button class="add-to-cart" onclick="addToCart('Gulab Jamun', 4.50)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/jalebi.jpg" alt="Jalebi">
+        <h3>Jalebi</h3>
+        <p>Crispy and sweet fried dessert soaked in sugar syrup.</p>
+        <span class="price">$3.50</span>
+        <button class="add-to-cart" onclick="addToCart('Jalebi', 3.50)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/rasgulla.avif" alt="Rasgulla">
+        <h3>Rasgulla</h3>
+        <p>Soft spongy balls made from chhena soaked in syrup.</p>
+        <span class="price">$4.00</span>
+        <button class="add-to-cart" onclick="addToCart('Rasgulla', 4.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/rasmalai.jpg" alt="Rasmalai">
+        <h3>Rasmalai</h3>
+        <p>Rich dessert made with sweet cream and soft flattened milk balls.</p>
+        <span class="price">$5.00</span>
+        <button class="add-to-cart" onclick="addToCart('Rasmalai', 5.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/kheer.jpeg" alt="Kheer">
+        <h3>Kheer</h3>
+        <p>Sweet rice pudding made with milk, sugar, and cardamom.</p>
+        <span class="price">$3.00</span>
+        <button class="add-to-cart" onclick="addToCart('Kheer', 3.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+      <div class="menu-item">
+        <img src="images/icecream.avif" alt="IceCreams">
+        <h3>Ice Creams</h3>
+        <p>Enjoy your happy moments with Ice Creams</p>
+        <span class="price">$5.00</span>
+        <button class="add-to-cart" onclick="addToCart('IceCreams', 3.00)">
+          <i class="fas fa-cart-plus"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+
+
+        </div>
+
+        <div class="cart-summary">
+          <button class="checkout-btn" onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Gourmet Paradise. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

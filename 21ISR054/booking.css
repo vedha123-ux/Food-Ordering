@@ -1,0 +1,125 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f3e7 url('images/reserved.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Reservation Section */
+.reservation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.reservation-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.reservation-box h2 {
+  color: #ff6f3c;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.reservation-box p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.reservation-box form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.reservation-box form .form-group label {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.reservation-box form .form-group input,
+.reservation-box form .form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.reservation-box form .form-group input:focus,
+.reservation-box form .form-group select:focus {
+  border-color: #ff6f3c;
+}
+
+.reservation-box form .form-group .error-message {
+  color: #e63946;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Checkbox Styling */
+.special-requests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.special-requests label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.special-requests input {
+  margin-right: 5px;
+}
+
+/* Button Styling */
+.reservation-box form .btn {
+  display: inline-block;
+  background: #ff6f3c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+.reservation-box form .btn:hover {
+  background: #d9572b;
+}
+
+/* Icons Styling */
+.reservation-box form .form-group label i {
+  color: #ff6f3c;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reservation-box {
+    padding: 20px 30px;
+  }
+  .reservation-box h2 {
+    font-size: 1.5em;
+  }
+  .reservation-box p {
+    font-size: 0.9em;
+  }
+}
